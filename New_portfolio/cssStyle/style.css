@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  
+}
+body{
+    background-color: #f2f2f2db;
+}
+body::-webkit-scrollbar{
+    width: .25rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: #1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #014642;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    /*background: linear-gradient(to left, #6cc5c0, #d1a984);
+    */background-color: white;
+    z-index: -1;
+}
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10vh;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+#logo{
+    grid-column: 2/3;
+    font-size: 24px;
+}
+nav h1{
+    font-size: 48px;
+    font-weight: normal;
+    display: none;
+    justify-self: end;
+    z-index: 12;
+    color: #1e1e24;
+}
+.hamburger{
+    width: 5vh;
+    justify-self: end;
+}
+.anm{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height: 60%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.headline{
+    position: absolute;
+    top: 68%;
+    left: 10%;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 72px;
+    transform: translate(-20%,-70%);
+    color: white;
+    z-index: 9;
+}
+.hero::after{
+    content: "";
+    background: #6cc5c0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+}
+.content {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #f8f8f8;
+    color: #70c5be;
+    display: none;
+}
+.content .socialmedia{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 15%;
+}
+.content .socialmedia > *{
+    padding: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: start;
+    padding-left: 15%;
+    margin-bottom: 10px;
+}
+/**GALLERY*/
+.services_section{
+    margin-top: 30vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   margin-bottom: 100px;
+}
+.services{
+    width: 100%;
+    box-shadow: -5px 4px 20px 0px #4343434f;
+    font-size: 30px;
+}
+.show-service{
+    text-align: center;
+    color: #212121e0;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.show-service *{
+    padding: 20px 20px;
+    line-height: 1.5;
+}
+.show-service p{
+    padding: 20px 50px;
+    text-align: start;
+}
+.show-service:not(:first-child){
+    display: none;
+}
+.images_group{
+display: flex;
+margin: 30px 0px;
+width: 100%;
+justify-content: space-around;
+box-shadow: -5px 4px 20px 0px #4343434f;
+}
+.images_group img{
+    width: 16%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+.about{
+    display: flex;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    color: #212121e0;
+}
+.desc{
+    padding-right: 30px;
+    line-height: 1.8;
+}
+.desc p{
+    margin-bottom:10px;
+    padding: 10px 20px 10px 0px;
+}
+.desc h2{
+    font-size: 36px;
+}
+.contact{
+    color: #212121e0;
+    margin-bottom: 200px;
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    line-height: 2;
+}
+.location{
+    width: 43%;
+}
+.location h2, .socialmedia h2{
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+.socialmedia p{
+    font-size: 24px;
+}
+.socialmedia p a{
+    color: inherit;
+}
+.socialmedia p span{
+    margin-right: 20px;
+}
+footer{
+    text-align: center;
+    background-color: #dfdfdf;
+    height: 56px;
+    padding-top: 20px;
+}
+@media screen and (max-width: 920px) {
+    .headline {
+        font-size: 64px;
+    }
+    .services_section {
+        width: 95%;
+    }
+    .images_group{
+        flex-wrap: wrap;
+    }
+    .images_group img {
+        width: 30%;
+        border-bottom: 2px solid #3b3b3b;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 5px;
+    }
+    .about {
+        flex-direction: column;
+        width: 95%;
+}
+.services {
+    font-size: 20px;
+}
+.show-service *{
+    padding: 20px 5px;
+    line-height: 1.3;
+}
+.contact {
+    flex-direction: column;
+    width: 95%;
+}
+.contact .socialmedia{
+    font-size: 24px;
+    padding-left: 30px;
+}
+.contact .socialmedia h2{
+    font-size: 24px;
+}
+.location {
+    width: 95%;
+    font-size: 24px;
+    padding-left: 30px;
+}
+.location h2{
+    font-size: 24px;
+}
+.content .socialmedia > * {
+    width: auto;
+    padding-left: 10%;
+}
+} 
